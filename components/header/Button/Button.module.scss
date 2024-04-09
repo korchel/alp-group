@@ -1,0 +1,28 @@
+.button {
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+    font-family: var(--font-family);
+
+    text-wrap: nowrap;
+}
+
+.primary-ghost {
+    background-color: var(--primary-ghost);
+    color: var(--primary);
+    &:hover {
+        background-color: var(--primary);
+        color: var(--primary-ghost);
+    }
+}
+
+.ghost {
+    background: none;
+    &:hover {
+        background-color: var(--primary-ghost);
+    }
+}

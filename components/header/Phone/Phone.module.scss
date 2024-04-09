@@ -1,0 +1,19 @@
+.phone {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.number {
+    margin: 0;
+    font-weight: 600;
+    text-wrap: nowrap;
+    + p {
+        margin: 0;
+
+        font-size: 14px;
+        font-weight: 400;
+
+        text-wrap: nowrap;
+    }
+}
