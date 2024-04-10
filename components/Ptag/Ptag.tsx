@@ -8,8 +8,9 @@ interface IPtagProps extends DetailedHTMLProps<HTMLAttributes<HTMLParagraphEleme
     fontStyle?: 'normal' | 'italic',
     textAlign?: 'center' | 'left',
     bold?: boolean;
+    large?: boolean;
 }
 
-export const Ptag: React.FC<IPtagProps> = ({fontStyle = 'normal', textAlign = 'left', bold = false, children, className}) => (
-    <p className={clsx(styles.ptag, styles[fontStyle], styles[textAlign], {[styles.bold]: bold}, className)}>{children}</p>
+export const Ptag: React.FC<IPtagProps> = ({fontStyle = 'normal', textAlign = 'left', bold = false, large = false, children, className}) => (
+    <p className={clsx(styles.ptag, styles[fontStyle], styles[textAlign], {[styles.bold]: bold}, {[styles.large]: large}, className)}>{children}</p>
 );
