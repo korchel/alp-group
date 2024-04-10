@@ -1,0 +1,26 @@
+.bannerContainer {
+    position: relative;
+    height: 560px;
+    width: 100%;
+}
+
+.img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.header {
+    position: relative;
+    top: 210px;
+}
+
+.bottomLeftAttach {
+    border-radius: 8px 8px 8px 0;
+}
+
+.topAttach {
+    border-radius: 0 0 8px 8px;
+}

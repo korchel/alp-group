@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import styles from "./Header.module.scss";
 import { Button } from "./Button/Button";
 import { Logo } from "./Logo/Logo";
@@ -5,7 +6,7 @@ import { Phone } from "./Phone/Phone";
 
 export const Header = () => {
   return (
-    <header className={styles.header}>
+    <header className={clsx(styles.header, 'container')}>
       <Logo />
       <div className={styles.buttonGgroup}>
         <Button variant="primary-ghost">Лаборатория</Button>

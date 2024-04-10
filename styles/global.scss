@@ -6,7 +6,7 @@ body {
   margin: 0;
   color: var(--black);
   background: var(--bg);
-  font-size: 18px;
+  font-size: 16px;
   font-family: var(--font-family);
 }
 
@@ -16,6 +16,11 @@ body {
   --primary-dark: #4F58C9;
   --danger: #E17373;
   --black: #000000;
+  --white: white;
   --bg: white;
   --font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  padding: 0 260px;
 }

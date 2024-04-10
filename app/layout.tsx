@@ -3,7 +3,11 @@ import "../styles/global.scss";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 
-const montserrat = Montserrat({ subsets: ["cyrillic", "latin"], weight: ["400", "500", "600", "700"] });
+const montserrat = Montserrat({
+  subsets: ["cyrillic", "latin"],
+  style: ['normal', 'italic'],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Kapibara",
@@ -17,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        {children}
+      </body>
     </html>
   );
 }

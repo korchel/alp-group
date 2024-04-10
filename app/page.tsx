@@ -1,10 +1,18 @@
-import { Header } from "../components/header";
+import { GreetingSection } from "../components/GreetingSection/GreetingSection";
+import { Banner } from "../components/Banner/Banner";
+import { Header } from "../components/Header";
+import { DescriptionSection } from "../components/DescriptionSection/DescriptionSection";
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <Banner />
+      <main>
+        <GreetingSection />
+        <DescriptionSection />
+      </main>
+    </>
   );
 };
 
