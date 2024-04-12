@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .btn {
     padding: 0.75rem 1.125rem;
     border: none;
@@ -6,13 +8,20 @@
     cursor: pointer;
 
     font-size: 21px;
-    font-family: var(--font-family);
+    font-family: $font-family;
     font-weight: 400;
+
+    transition: all 0.3s;
 }
 
 .primary {
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: $primary-color;
+    color: $white;
+    &:hover {
+        background-color: $primary-ghost;
+        border: solid 2px $primary-color;
+        color: $primary-color;
+    }
 }
 
 .img {

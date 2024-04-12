@@ -6,7 +6,7 @@ import styles from './Banner.module.scss';
 import { Htag } from "./Htag/Htag";
 
 export const Banner = () => (
-    <div className={clsx(styles.bannerContainer, 'container')}>
+    <div className={clsx(styles.bannerContainer)}>
         <Image 
             src={banner}
             alt="capybara scientist"

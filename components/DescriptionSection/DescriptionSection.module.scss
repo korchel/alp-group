@@ -1,9 +1,13 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
 .description {
+    @include container;
     padding-top: 3rem;
     padding-bottom: 3rem;
 
     display: flex;
-    background-color: var(--primary-ghost);
+    background-color: $primary-ghost;
 }
 
 .mt {

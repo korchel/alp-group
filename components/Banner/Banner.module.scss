@@ -1,7 +1,10 @@
+@import '../../styles/mixins.scss';
+
 .bannerContainer {
     position: relative;
     height: 560px;
     width: 100%;
+    @include container;
 }
 
 .img {

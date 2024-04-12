@@ -1,26 +1,13 @@
+@import './variables.scss';
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  color: var(--black);
-  background: var(--bg);
+  color: $black;
+  background: $bg-color;
   font-size: 16px;
-  font-family: var(--font-family);
-}
-
-:root {
-  --primary: #737BE1;
-  --primary-ghost: #E9EAF9;
-  --primary-dark: #4F58C9;
-  --danger: #E17373;
-  --black: #000000;
-  --white: white;
-  --bg: white;
-  --font-family: 'Montserrat', sans-serif;
-}
-
-.container {
-  padding: 0 260px;
+  font-family: $font-family;
 }
