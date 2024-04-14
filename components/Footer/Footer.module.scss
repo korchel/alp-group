@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.footer {
+  @include container;
+  height: 150px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $primary-color;
+  @media (max-width: 900px) {
+    height: 120px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 18px;
+  }
+}
+
+.logo {
+  width: 194px;
+  height: 29px;
+  @media (max-width: 900px) {
+    width: 150px;
+    height: 23px;
+  }
+}
+
+.mt {
+  margin-top: 6rem;
+  @media (max-width: 900px) {
+    margin-top: 1.875rem;
+  }
+}

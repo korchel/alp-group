@@ -1,20 +1,26 @@
 .phone {
-    display: flex;
-    gap: 8px;
-    align-items: center;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .number {
+  margin: 0;
+  font-weight: 600;
+  text-wrap: nowrap;
+  font-size: 18px;
+  + p {
     margin: 0;
-    font-weight: 600;
+
+    font-size: 14px;
+    font-weight: 400;
+
     text-wrap: nowrap;
-    font-size: 18px;
-    + p {
-        margin: 0;
+  }
+}
 
-        font-size: 0.875rem;
-        font-weight: 400;
-
-        text-wrap: nowrap;
-    }
+.contacts {
+  @media (max-width: 900px) {
+    display: none;
+  }
 }

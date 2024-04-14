@@ -1,0 +1,37 @@
+@import "../../../styles/variables.scss";
+
+.inputField {
+  max-width: 280px;
+  padding: 12px 16px;
+  border: 2px solid transparent;
+  outline: none;
+  border-radius: 0.5rem;
+  font-size: 21px;
+  font-family: inherit;
+  font-weight: 400;
+  &::placeholder {
+    color: #a0a0a0;
+  }
+  &:focus {
+    border: 2px solid $primary-color;
+  }
+  @media (max-width: 900px) {
+    font-size: 18px;
+  }
+}
+
+.ErrorBorder {
+  border: 2px solid $danger-color;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.error {
+  position: absolute;
+
+  top: -20px;
+
+  color: $danger-color;
+}

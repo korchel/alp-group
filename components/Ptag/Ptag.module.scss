@@ -1,25 +1,51 @@
+@import '../../styles/variables.scss';
+
 .ptag {
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 1.4em;
+  font-weight: 400;
+  line-height: 1.4em;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .left {
-    text-align: left;
+  text-align: left;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 
-.large {
-    font-size: 24px;
+.l {
+  font-size: 24px;
+  @media (max-width: 900px) {
+    font-size: 18px;
+  }
+}
+
+.m {
+  font-size: 21px;
+  @media (max-width: 900px) {
+    font-size: 18px;
+  }
+}
+
+.s {
+  font-size: 16px;
+  @media (max-width: 900px) {
+    font-size: 12px;
+  }
+}
+
+.white {
+  color: $white;
+}
+
+.blacke {
+  color: $black;
 }

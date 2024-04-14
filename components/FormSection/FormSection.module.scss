@@ -1,0 +1,24 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.formSection {
+  @include container;
+  @media (max-width: 900px) {
+    background-color: $primary-ghost;
+  }
+}
+
+.formContainer {
+  padding: 3rem 0;
+
+  border-radius: 0.5rem;
+  @include center;
+  gap: 3rem;
+
+  background-color: $primary-ghost;
+  @media (max-width: 900px) {
+    padding: 2.25rem 0;
+    gap: 2.25rem;
+
+  }
+}

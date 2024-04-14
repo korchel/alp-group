@@ -5,7 +5,7 @@ import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
   subsets: ["cyrillic", "latin"],
-  style: ['normal', 'italic'],
+  style: ["normal", "italic"],
   weight: ["400", "500", "600", "700"],
 });
 
@@ -21,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

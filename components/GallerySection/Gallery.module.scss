@@ -1,13 +1,26 @@
-@import '../../styles/mixins.scss';
+@import "../../styles/mixins.scss";
 
 .gallery {
   @include container;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .grid {
   display: grid;
-
+  grid-template-columns: repeat(auto-fit, 332px);
+  grid-auto-flow: row dense;
+  gap: 24px;
 }
 
+.twoColumns {
+  grid-column: span 2;
+}
+
+.twoRows {
+  grid-row: span 2;
+}
+
+.mt3 {
+  margin-top: 3rem;
+}

@@ -1,14 +1,29 @@
-@import '../../styles/mixins.scss';
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
 
 .header {
+  position: sticky;
+  top: 0;
   height: 150px;
+  @include container;
+
   display: flex;
   justify-content: space-between;
-  @include container;
+  gap: 20px;
+
+  z-index: 10;
+
+  background-color: $white;
+  @media (max-width: 900px) {
+    height: 110px;
+  }
 }
 
 .buttonGgroup {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  @media (max-width: 900px) {
+    display: none;
+  }
 }

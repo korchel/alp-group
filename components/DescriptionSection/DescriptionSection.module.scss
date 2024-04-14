@@ -1,15 +1,52 @@
-@import '../../styles/mixins.scss';
-@import '../../styles/variables.scss';
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
 
 .description {
-    @include container;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+  @include container;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
-    display: flex;
-    background-color: $primary-ghost;
+  background-color: $primary-ghost;
+  @media (max-width: 900px) {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
 }
 
-.mt {
-    margin-top: 2rem;
+.grid {
+  display: grid;
+  grid-template-areas:
+    "title picture"
+    "text picture"
+    "button picture";
+  gap: 2.25rem 3rem;
+  @media (max-width: 900px) {
+    grid-template-areas:
+      "title"
+      "picture"
+      "text"
+      "button";
+    gap: 1.5rem;
+  }
+}
+
+.title {
+  grid-area: title;
+}
+
+.text {
+  grid-area: text;
+}
+
+.picture {
+  grid-area: picture;
+  max-width: 400px;
+}
+
+.button {
+  grid-area: button;
+}
+
+.mt1 {
+  margin-top: 1rem;
 }
