@@ -6,7 +6,9 @@ import logo from "./Logo.png";
 
 export const Footer = () => (
   <footer className={clsx(styles.footer, styles.mt)}>
-    <Ptag size="s" color="white">Все права защищены Российской Ассоциацией Капибар</Ptag>
+    <Ptag size="s" color="white" textAlign="center">
+      Все права защищены Российской Ассоциацией Капибар
+    </Ptag>
     <Image src={logo} alt="logo" />
   </footer>
 );

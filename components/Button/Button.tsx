@@ -7,6 +7,7 @@ import clsx from "clsx";
 import ArrowIconIcon from "./arrowIcon.svg";
 import CheckMarkIcon from "./checkMarkIcon.svg";
 import styles from "./Button.module.scss";
+import Link from "next/link";
 
 interface IButtonProps
   extends DetailedHTMLProps<
@@ -15,15 +16,26 @@ interface IButtonProps
   > {
   icon: "arrow" | "check";
   children: ReactNode;
+  href?: string;
 }
 
 export const Button: React.FC<IButtonProps> = ({
   icon,
   children,
+  href,
   ...props
 }) => (
-  <button {...props} className={clsx(styles.btn, styles.primary)}>
-    {children}
-    {icon === "check" ? <CheckMarkIcon /> : <ArrowIconIcon />}
-  </button>
+  <>
+    {href ? (
+      <Link href={href} className={clsx(styles.btn, styles.primary)}>
+        {children}
+        {icon === "check" ? <CheckMarkIcon /> : <ArrowIconIcon />}
+      </Link>
+    ) : (
+      <button {...props} className={clsx(styles.btn, styles.primary)}>
+        {children}
+        {icon === "check" ? <CheckMarkIcon /> : <ArrowIconIcon />}
+      </button>
+    )}
+  </>
 );

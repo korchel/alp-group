@@ -1,3 +1,5 @@
+import { Observer } from "../context/obeserverContext";
+
 import { GreetingSection } from "../components/GreetingSection/GreetingSection";
 import { Banner } from "../components/Banner/Banner";
 import { Header } from "../components/Header";
@@ -8,7 +10,7 @@ import { Footer } from "../components/Footer/Footer";
 
 const HomePage = () => {
   return (
-    <>
+    <Observer>
       <Header />
       <Banner />
       <main>
@@ -18,7 +20,7 @@ const HomePage = () => {
         <FormSection />
         <Footer />
       </main>
-    </>
+    </Observer>
   );
 };
 

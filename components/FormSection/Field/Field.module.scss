@@ -2,6 +2,7 @@
 
 .inputField {
   max-width: 280px;
+  width: 100%;
   padding: 12px 16px;
   border: 2px solid transparent;
   outline: none;
@@ -17,6 +18,7 @@
   }
   @media (max-width: 900px) {
     font-size: 18px;
+    max-width: none;
   }
 }
 
@@ -26,6 +28,10 @@
 
 .inputGroup {
   position: relative;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 }
 
 .error {

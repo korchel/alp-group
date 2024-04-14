@@ -20,4 +20,7 @@
 .ghost {
   color: $primary-color;
   background-color: $white;
+  @media (max-width: 900px) {
+    background-color: $primary-ghost;
+  }
 }

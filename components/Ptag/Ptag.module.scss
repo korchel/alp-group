@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .ptag {
   font-weight: 400;
@@ -17,8 +17,12 @@
   font-style: italic;
 }
 
+.normal {
+  font-weight: 400;
+}
+
 .bold {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .l {
@@ -46,6 +50,10 @@
   color: $white;
 }
 
-.blacke {
+.black {
   color: $black;
+}
+
+.primary {
+  color: $primary-color;
 }

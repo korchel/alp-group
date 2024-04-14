@@ -14,21 +14,16 @@
 
   text-wrap: nowrap;
 
-  transition: all 0.3s;
-}
+  transition: all 0.3s ease;
 
-.primary-ghost {
-  background-color: $primary-ghost;
-  color: $primary-color;
-  &:hover {
-    background-color: $primary-color;
-    color: $primary-ghost;
-  }
-}
-
-.ghost {
-  background: none;
   &:hover {
     background-color: $primary-ghost;
+    color: $primary-color;
   }
+}
+
+.active {
+  background-color: $primary-ghost;
+  color: $primary-color;
+  pointer-events: none;
 }

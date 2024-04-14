@@ -15,17 +15,17 @@ interface IPtagProps
   children: ReactNode;
   fontStyle?: "normal" | "italic";
   textAlign?: "center" | "left";
-  bold?: boolean;
-  size?: 'l' | 'm' | 's';
-  color?: 'black' | 'white';
+  weight?: "normal" | "bold";
+  size?: "l" | "m" | "s";
+  color?: "black" | "white" | "primary";
 }
 
 export const Ptag: React.FC<IPtagProps> = ({
   fontStyle = "normal",
   textAlign = "left",
-  bold = false,
-  size = 'm',
-  color = 'black',
+  weight = "normal",
+  size = "m",
+  color = "black",
   children,
   className,
 }) => (
@@ -34,7 +34,7 @@ export const Ptag: React.FC<IPtagProps> = ({
       styles.ptag,
       styles[fontStyle],
       styles[textAlign],
-      { [styles.bold]: bold },
+      styles[weight],
       styles[size],
       styles[color],
       className,

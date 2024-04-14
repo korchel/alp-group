@@ -1,6 +1,6 @@
 @mixin container {
-  padding-right: 260px;
-  padding-left: 260px;
+  padding-right: clamp(1.125rem, 23.725vw - 12.221rem, 16.25rem);
+  padding-left: clamp(1.125rem, 23.725vw - 12.221rem, 16.25rem);
   @media (max-width: 900px) {
     padding-right: 18px;
     padding-left: 18px;

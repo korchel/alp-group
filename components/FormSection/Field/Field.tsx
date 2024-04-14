@@ -23,6 +23,7 @@ export const Field: React.FC<IFieldProps> = ({
       name={name}
       type="text"
       placeholder={placeholder}
+      area-label={placeholder}
     />
   </div>
 );

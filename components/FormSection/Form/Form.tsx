@@ -34,7 +34,7 @@ export const Form: React.FC<IFormProps> = ({ setShow }) => {
   return (
     <>
       <Htag>Заявка на диагностику</Htag>
-      <Ptag className={styles.textAlign} textAlign="center">
+      <Ptag className={clsx(styles.textAlign, styles.maxW)} textAlign="center">
         Доверьте свои медицинские исследования надежным капибарам-лаборантам и
         получите качественные результаты в кратчайшие сроки!
       </Ptag>

@@ -4,23 +4,36 @@
   @include container;
   padding-top: 6rem;
   padding-bottom: 6rem;
+  @media (max-width: 900px) {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 332px);
+  grid-template-columns: repeat(auto-fit, minmax(324px, auto));
   grid-auto-flow: row dense;
   gap: 24px;
 }
 
 .twoColumns {
   grid-column: span 2;
+  @media (max-width: 700px) {
+    display: none;
+  }
 }
 
 .twoRows {
   grid-row: span 2;
+  @media (max-width: 700px) {
+    display: none;
+  }
 }
 
-.mt3 {
+.mt {
   margin-top: 3rem;
+  @media (max-width: 900px) {
+    margin-top: 1.5rem;
+  }
 }
