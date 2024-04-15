@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import clsx from "clsx";
 
@@ -8,21 +8,11 @@ import { Ptag } from "../Ptag/Ptag";
 import styles from "./DescriptionSection.module.scss";
 import capybara from "./descriptionSection.png";
 import { Button } from "../Button/Button";
-import { useIntersectionObserver } from "usehooks-ts";
-import { ObserverContext } from "../../context/obeserverContext";
+import { useObserver } from "../hooks/useObserver";
 
 export const DescriptionSection = (): JSX.Element => {
-  const { setActiveTab } = useContext(ObserverContext);
+  const ref = useObserver("description");
 
-  const { isIntersecting, ref } = useIntersectionObserver({
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    if (setActiveTab) {
-      setActiveTab(isIntersecting ? "description" : null);
-    }
-  }, [isIntersecting]);
   return (
     <section className={styles.description} id="description" ref={ref}>
       <div className={styles.grid}>

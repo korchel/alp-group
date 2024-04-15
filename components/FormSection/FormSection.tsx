@@ -1,25 +1,14 @@
 "use client";
-import React, { useContext, useState, useEffect } from "react";
-import { useIntersectionObserver } from "usehooks-ts";
+import React, { useState } from "react";
 
 import styles from "./FormSection.module.scss";
 import { Form } from "./Form/Form";
 import { Message } from "./Message/Message";
-import { ObserverContext } from "../../context/obeserverContext";
+import { useObserver } from "../hooks/useObserver";
 
 export const FormSection = () => {
   const [show, setShow] = useState<"form" | "message">("form");
-  const { setActiveTab } = useContext(ObserverContext);
-
-  const { isIntersecting, ref } = useIntersectionObserver({
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    if (setActiveTab) {
-      setActiveTab(isIntersecting ? "form" : null);
-    }
-  }, [isIntersecting]);
+  const ref = useObserver("form");
 
   return (
     <section ref={ref} className={styles.formSection} id="form">

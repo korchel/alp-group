@@ -11,9 +11,7 @@ import picture6 from "./images/picture6.png";
 import picture7 from "./images/picture7.png";
 import styles from "./Gallery.module.scss";
 import { Htag } from "../Htag/Htag";
-import { useContext, useEffect } from "react";
-import { useIntersectionObserver } from "usehooks-ts";
-import { ObserverContext } from "../../context/obeserverContext";
+import { useObserver } from "../hooks/useObserver";
 
 const images = [
   { src: picture1, alt: "lab", id: 1 },
@@ -26,17 +24,7 @@ const images = [
 ];
 
 export const GallerySection = () => {
-  const { setActiveTab } = useContext(ObserverContext);
-
-  const { isIntersecting, ref } = useIntersectionObserver({
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    if (setActiveTab) {
-      setActiveTab(isIntersecting ? "gallery" : null);
-    }
-  }, [isIntersecting]);
+  const ref = useObserver("gallery");
 
   return (
     <section className={styles.gallery} id="gallery" ref={ref}>
@@ -49,8 +37,8 @@ export const GallerySection = () => {
             <div
               key={image.id}
               className={clsx(
-                { [styles.twoRows]: height > 332 },
-                { [styles.twoColumns]: width > 332 },
+                { [styles.twoRows]: height / 4 > 332 },
+                { [styles.twoColumns]: width / 4 > 332 },
               )}
             >
               <Image layout="responsive" src={image.src} alt={image.alt} />

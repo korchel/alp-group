@@ -15,6 +15,7 @@ export const NavItem: React.FC<INavItemProps> = ({
   goTo,
   active,
 }) => {
+  console.log(active, goTo);
   return (
     <Link
       href={goTo}
