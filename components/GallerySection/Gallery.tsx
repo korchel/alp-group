@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import clsx from "clsx";
+import VisibilitySensor from "react-visibility-sensor";
 
 import picture1 from "./images/picture1.png";
 import picture2 from "./images/picture2.png";
@@ -11,7 +12,7 @@ import picture6 from "./images/picture6.png";
 import picture7 from "./images/picture7.png";
 import styles from "./Gallery.module.scss";
 import { Htag } from "../Htag/Htag";
-import { useObserver } from "../hooks/useObserver";
+import { useVisibility } from "../hooks/useVisibility";
 
 const images = [
   { src: picture1, alt: "lab", id: 1 },
@@ -24,28 +25,30 @@ const images = [
 ];
 
 export const GallerySection = () => {
-  const ref = useObserver("gallery");
+  const handleVisibility = useVisibility("gallery");
 
   return (
-    <section className={styles.gallery} id="gallery" ref={ref}>
-      <Htag>Галерея</Htag>
-      <div className={clsx(styles.grid, styles.mt)}>
-        {images.map((image) => {
-          const { height } = image.src;
-          const { width } = image.src;
-          return (
-            <div
-              key={image.id}
-              className={clsx(
-                { [styles.twoRows]: height / 4 > 332 },
-                { [styles.twoColumns]: width / 4 > 332 },
-              )}
-            >
-              <Image layout="responsive" src={image.src} alt={image.alt} />
-            </div>
-          );
-        })}
-      </div>
-    </section>
+    <VisibilitySensor onChange={handleVisibility} scrollCheck={true}>
+      <section className={styles.gallery} id="gallery">
+        <Htag>Галерея</Htag>
+        <div className={clsx(styles.grid, styles.mt)}>
+          {images.map((image) => {
+            const { height } = image.src;
+            const { width } = image.src;
+            return (
+              <div
+                key={image.id}
+                className={clsx(
+                  { [styles.twoRows]: height / 4 > 332 },
+                  { [styles.twoColumns]: width / 4 > 332 },
+                )}
+              >
+                <Image layout="responsive" src={image.src} alt={image.alt} />
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    </VisibilitySensor>
   );
 };
