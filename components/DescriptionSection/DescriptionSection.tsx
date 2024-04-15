@@ -42,7 +42,7 @@ export const DescriptionSection = (): JSX.Element => {
             <Image
               src={capybara}
               alt="capybara and test tubes"
-              layout="responsive"
+              style={{width: '100%', height: 'auto'}}
             />
           </div>
         </div>

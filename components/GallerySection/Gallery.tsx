@@ -43,7 +43,7 @@ export const GallerySection = () => {
                   { [styles.twoColumns]: width / 4 > 332 },
                 )}
               >
-                <Image layout="responsive" src={image.src} alt={image.alt} />
+                <Image src={image.src} alt={image.alt} style={{width: '100%', height: 'auto'}}/>
               </div>
             );
           })}
