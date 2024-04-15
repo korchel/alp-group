@@ -12,7 +12,7 @@ export const FormSection = () => {
   const handleVisibility = useVisibility("form");
 
   return (
-    <VisibilitySensor onChange={handleVisibility} scrollCheck={true}>
+    <VisibilitySensor onChange={handleVisibility} scrollCheck={true} partialVisibility={true} >
       <section className={styles.formSection} id="form">
         <div className={styles.formContainer}>
           {show === "form" && <Form setShow={setShow} />}

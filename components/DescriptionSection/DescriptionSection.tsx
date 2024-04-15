@@ -14,7 +14,7 @@ export const DescriptionSection = (): JSX.Element => {
   const handleVisibility = useVisibility("description");
 
   return (
-    <VisibilitySensor onChange={handleVisibility} scrollCheck={true}>
+    <VisibilitySensor onChange={handleVisibility} scrollCheck={true} partialVisibility={true} offset={{top: 150, bottom: 100}}>
       <section className={styles.description} id="description">
         <div className={styles.grid}>
           <Htag className={styles.title}>Лаборатория</Htag>

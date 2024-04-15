@@ -28,7 +28,7 @@ export const GallerySection = () => {
   const handleVisibility = useVisibility("gallery");
 
   return (
-    <VisibilitySensor onChange={handleVisibility} scrollCheck={true}>
+    <VisibilitySensor onChange={handleVisibility} scrollCheck={true} partialVisibility={true} offset={{top: 500, bottom: 500}}>
       <section className={styles.gallery} id="gallery">
         <Htag>Галерея</Htag>
         <div className={clsx(styles.grid, styles.mt)}>
